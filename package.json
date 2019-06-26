@@ -1,0 +1,103 @@
+{
+  "name": "social-media",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "copy:readme": "copyfiles ./README.md ./projects/social-media",
+    "build": "npm run build:lib && npm run build:demo",
+    "build:lib": "npm run copy:readme && ng build social-media",
+    "build:demo": "ng build social-media-showcase --base-href='https://victoriavivalda.github.io/social-media/'",
+    "format:check": "prettier --list-different 'projects/**/*.ts'",
+    "format:write": "prettier --write 'projects/**/*.ts'",
+    "format-package-json": "npm-run-all format-package-json:*",
+    "format-package-json:lib": "prettier --write 'projects/social-media/package.json'",
+    "format-package-json:main": "prettier --write 'package.json'",
+    "test:lib": "ng test social-media",
+    "test:lib-coverage": "ng test social-media --code-coverage --watch=false",
+    "report-coverage:lib": "cat ./coverage/social-media/lcov.info | codecov",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/social-media-showcase",
+    "publish:lib": "npx semantic-release",
+    "adjust-version": "npm-run-all adjust-version:*",
+    "adjust-version:lib": "rjp projects/social-media/package.json version $VERSION",
+    "adjust-version:main": "rjp package.json version $VERSION",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "semantic-release": "semantic-release"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.0.0",
+    "@angular/common": "~8.0.0",
+    "@angular/compiler": "~8.0.0",
+    "@angular/core": "~8.0.0",
+    "@angular/forms": "~8.0.0",
+    "@angular/platform-browser": "~8.0.0",
+    "@angular/platform-browser-dynamic": "~8.0.0",
+    "@angular/router": "~8.0.0",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.9.1",
+    "angular-font-awesome": "^3.1.2",
+    "font-awesome": "~4.7.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.800.0",
+    "@angular-devkit/build-ng-packagr": "~0.800.0",
+    "@angular/cli": "~8.0.2",
+    "@angular/compiler-cli": "~8.0.0",
+    "@angular/language-service": "~8.0.0",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "husky": "^2.5.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.1.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "lint-staged": "^8.2.1",
+    "ng-packagr": "^5.1.0",
+    "prettier": "^1.18.2",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tsickle": "^0.35.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.4.3",
+    "@commitlint/cli": "^7.6.0",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@commitlint/prompt": "^7.6.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/exec": "^3.3.2",
+    "@semantic-release/git": "^7.0.8",
+    "codecov": "^3.4.0",
+    "copyfiles": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "replace-json-property": "^1.4.0",
+    "semantic-release": "^15.13.12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "projects/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victoriavivalda/social-media.git"
+  }
+}
