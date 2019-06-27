@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
-import { SocialMediaModule } from 'social-media';
+import { SocialMediaModule } from '../../../social-media/src/lib/social-media.module';
 
 @NgModule({
   declarations: [AppComponent],
