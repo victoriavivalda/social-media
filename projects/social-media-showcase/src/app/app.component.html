@@ -1,9 +1,31 @@
 <div style="text-align:center">
   <h1> {{ title }} </h1>
-  <br><br>
-  <h2>Single Icon </h2>
-  <lib-icon [name]="singleIcon.name" [url]="singleIcon.url"></lib-icon>
   <br>
-  <h2>List of Icons </h2>
-  <lib-social-media [icons]="listOfIcons"></lib-social-media>
+  <div>
+    <h2> Angular Components </h2>
+    <h3>Single Icon </h3>
+    <lib-icon [name]="singleIcon.name" [url]="singleIcon.url"></lib-icon>
+    <h3>List of Icons </h3>
+    <lib-social-media [icons]="listOfIcons"></lib-social-media>
+  </div>
+
+  <div>
+    <h2> Angular Elements </h2>
+    <h3>Single Icon </h3>
+    <icon-element name="{{singleIcon.name}}" url="{{singleIcon.url}}"></icon-element> 
+    <h3>List of Icons </h3>
+    <social-media-element icons='[
+      { "name": "skype", "url": "https://www.skype.com" },
+      { "name": "instagram", "url": "https://www.instagram.com" },
+      { "name": "medium", "url": "https://www.medium.com" },
+      { "name": "twitter", "url": "https://www.twitter.com" },
+      { "name": "linkedin", "url": "https://www.linkedin.com" },
+      { "name": "facebook", "url": "https://my.workplace.com" },
+      { "name": "slack", "url": "https://join.slack.com/t/iam-labs/signup" },
+      { "name": "github", "url": "https://github.com/iam-labs" }
+      ]'>
+    </social-media-element>  
+  </div>
+
 </div>
+

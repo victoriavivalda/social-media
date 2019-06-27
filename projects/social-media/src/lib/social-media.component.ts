@@ -6,11 +6,25 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./social-media.component.scss']
 })
 export class SocialMediaComponent implements OnInit {
-  @Input() icons: any;
+  @Input() public icons: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterContentInit() {
+    if (typeof this.icons === 'string') {
+      this.icons = JSON.parse(this.icons);
+    }
   }
 
+  ngOnChanges() {
+    if (typeof this.icons === 'string') {
+      this.icons = JSON.parse(this.icons);
+    }
+  }
+
+  hasListOfIcos(): boolean {
+    return this.icons && typeof this.icons === 'object';
+  }
 }

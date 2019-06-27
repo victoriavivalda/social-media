@@ -151,6 +151,119 @@
           }
         }
       }
+    },
+    "social-media-elements-helper": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/social-media-elements-helper",
+      "sourceRoot": "projects/social-media-elements-helper/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/social-media-elements-helper",
+            "index": "projects/social-media-elements-helper/src/index.html",
+            "main": "projects/social-media-elements-helper/src/main.ts",
+            "polyfills": "projects/social-media-elements-helper/src/polyfills.ts",
+            "tsConfig": "projects/social-media-elements-helper/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/social-media-elements-helper/src/favicon.ico",
+              "projects/social-media-elements-helper/src/assets"
+            ],
+            "styles": [
+              "projects/social-media-elements-helper/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/social-media-elements-helper/src/environments/environment.ts",
+                  "with": "projects/social-media-elements-helper/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "social-media-elements-helper:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "social-media-elements-helper:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "social-media-elements-helper:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/social-media-elements-helper/src/test.ts",
+            "polyfills": "projects/social-media-elements-helper/src/polyfills.ts",
+            "tsConfig": "projects/social-media-elements-helper/tsconfig.spec.json",
+            "karmaConfig": "projects/social-media-elements-helper/karma.conf.js",
+            "assets": [
+              "projects/social-media-elements-helper/src/favicon.ico",
+              "projects/social-media-elements-helper/src/assets"
+            ],
+            "styles": [
+              "projects/social-media-elements-helper/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/social-media-elements-helper/tsconfig.app.json",
+              "projects/social-media-elements-helper/tsconfig.spec.json",
+              "projects/social-media-elements-helper/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/social-media-elements-helper/e2e/protractor.conf.js",
+            "devServerTarget": "social-media-elements-helper:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "social-media-elements-helper:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "social-media",

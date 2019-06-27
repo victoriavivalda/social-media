@@ -9,13 +9,20 @@ import { Icon } from './icon.model';
 })
 export class IconComponent implements OnInit {
   icon: Icon;
-  @Input() name: string;
-  @Input() url: string;
+  @Input() public name: string;
+  @Input() public url: string;
 
-  constructor(private socialMediaService: SocialMediaService) { }
+  constructor(private socialMediaService: SocialMediaService) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterContentInit() {
     this.icon = this.socialMediaService.getIcon(this.name, this.url);
   }
 
+  ngOnChanges() {
+    if (this.icon) {
+      this.icon = this.socialMediaService.getIcon(this.name, this.url);
+    }
+  }
 }

@@ -1,25 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
-import { SocialMediaModule } from '../../../social-media/src/lib/social-media.module';
+import { SocialMediaModule } from 'social-media';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    HttpClientModule,
-    AngularFontAwesomeModule,
-    SocialMediaModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, CommonModule, HttpClientModule, AngularFontAwesomeModule, SocialMediaModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}
