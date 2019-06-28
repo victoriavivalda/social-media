@@ -62,8 +62,10 @@
               "node_modules/font-awesome/scss/font-awesome.scss",
               "projects/social-media-showcase/src/styles.css"
             ],
-            "scripts": []
-          },
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js"
+            ]          },
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -173,9 +175,13 @@
               "projects/social-media-elements-helper/src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
               "projects/social-media-elements-helper/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js"
+            ]
           },
           "configurations": {
             "production": {

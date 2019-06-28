@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" as="font" href="/fontawesome-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+    <script src="social-media.bundle.js"></script>
+
+    <title>Angular Elements</title>
+  </head>
+
+  <body>
+    <div style="text-align:center">
+      <h1>Non Angular App Showcase</h1>
+      <br>
+
+      <h2> Angular Elements </h2>
+      
+      <h3>Single Icon </h3>
+      <icon-element name="instagram" url="www.instagram.com"></icon-element> 
+      
+      <h3>List of Icons </h3>
+      <social-media-element icons='[
+          { "name": "skype", "url": "https://www.skype.com" },
+          { "name": "instagram", "url": "https://www.instagram.com" },
+          { "name": "medium", "url": "https://www.medium.com" },
+          { "name": "twitter", "url": "https://www.twitter.com" },
+          { "name": "linkedin", "url": "https://www.linkedin.com" },
+          { "name": "facebook", "url": "https://my.workplace.com" },
+          { "name": "slack", "url": "https://join.slack.com/t/iam-labs/signup" },
+          { "name": "github", "url": "https://github.com/iam-labs" }
+        ]'>
+      </social-media-element>  
+    </div>
+  </body>
+
+</html>

@@ -14,7 +14,13 @@ export class IconComponent implements OnInit {
 
   constructor(private socialMediaService: SocialMediaService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.icon = this.socialMediaService.getIcon(this.name, this.url);
+  }
+
+  ngAfterViewInit() {
+    this.icon = this.socialMediaService.getIcon(this.name, this.url);
+  }
 
   ngAfterContentInit() {
     this.icon = this.socialMediaService.getIcon(this.name, this.url);
