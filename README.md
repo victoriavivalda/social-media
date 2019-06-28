@@ -14,7 +14,7 @@ https://victoriavivalda.github.io/social-media/
   - Empty Angular Application to generate bundles to be used by non-angular applications.
 2. Non-Angular site to consume the custom elements
 
-### How can be used?
+### How can it be used?
 
 Use these npm commands to:
 
@@ -27,6 +27,4 @@ Use these npm commands to:
 - Build social-media, social-media-showcase, build social-media-elements-helper and bundle the files: **npm run build:all**
 - Run social-media-showcase: **npm run start**
 
-- Run non-angular site: change directory to html-app and execute: **http-server**, open localhost:8080/index.html in the browser. 
-
-*Need to have globally installed http-server, otherwise, npm install http-server g, close the command prompt, cd html-app, http-server and open the localhost on the open port that is shown as part of the command execution.*
+- Run non-angular site: change directory to html-app and execute: **http-server**, open localhost:8080/index.html in the browser. *Need to have globally installed http-server, otherwise, npm install http-server g, close the command prompt, cd html-app, http-server and open the localhost on the open port that is shown as part of the command execution.*
