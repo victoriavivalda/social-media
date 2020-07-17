@@ -8,7 +8,7 @@
     "build": "npm run build:lib && npm run build:demo",
     "build:all": "npm run build:lib && npm run build:element && npm run bundle:element",
     "build:lib": "npm run copy:readme && ng build social-media",
-    "build:demo": "ng build social-media-showcase --base-href='https://vicky-ui.github.io/social-media/'",
+    "build:demo": "ng build social-media-showcase --base-href='https://vickui.github.io/social-media/'",
     "build:element": "ng build social-media && ng build --project=social-media-elements-helper",
     "bundle:element": "jscat ./dist/social-media-elements-helper/runtime.js ./dist/social-media-elements-helper/polyfills.js ./dist/social-media-elements-helper/vendor.js ./dist/social-media-elements-helper/styles.js ./dist/social-media-elements-helper/scripts.js ./dist/social-media-elements-helper/main.js > html-app/social-media.bundle.js",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
@@ -90,6 +90,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vicky-ui/social-media.git"
+    "url": "https://github.com/vickui/social-media.git"
   }
 }
