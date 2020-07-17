@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/vicky-ui/social-media.svg?branch=master)](https://travis-ci.org/vicky-ui/social-media)
+[![Build Status](https://travis-ci.org/vicky-ui/social-media.svg?branch=master)](https://travis-ci.org/vickui/social-media)
 
 
 # social-media
 ## Angular Library POC 
 
-https://vicky-ui.github.io/social-media/
+https://vickui.github.io/social-media/
 
 ### What does this repository contain?
 
