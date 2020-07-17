@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vicky-ui/social-media.svg?branch=master)](https://travis-ci.org/vickui/social-media)
+[![Build Status](https://travis-ci.org/vickui/social-media.svg?branch=master)](https://travis-ci.org/vickui/social-media)
 
 
 # social-media
